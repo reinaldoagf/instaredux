@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:wght@100;200&display=swap');
+@import 'material-icons/iconfont/material-icons.css';
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    color: #000000;
+    font-family: 'Poppins';
+    background-color: rgb(243, 242, 245);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
