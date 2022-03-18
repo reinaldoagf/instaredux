@@ -1,0 +1,18 @@
+<div class="profile-grid flexbox-col">
+    <div class="profile-grid-inner view-width">
+      <ng-container *ngFor="let post of profile.posts">
+        <div id="{{post.id}}" class="profile-post flexbox">
+          <div class="profile-post-overlay"></div><img
+            [src]="post.image"
+            class="profile-post-image post-image-1">
+            <ng-container *ngIf="post.collections">
+              <p class="profile-post-multiple-image-icon"><span class="material-icons-round">collections</span></p>
+            </ng-container>
+          <div class="profile-post-lc flexbox">
+            <p class="profile-post-likes flexbox"><span class="material-icons-round">thumb_up</span>{{post.likes}}</p>
+            <p class="profile-post-comments flexbox"><span class="material-icons-round">textsms</span>{{post.comments}}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>

@@ -1,0 +1,91 @@
+<ng-template #form let-modal>
+  <form>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Actualizar perfil</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <div class="custom-form">
+        <div class="d-flex">
+          <div class="w-50">
+            <div class="field">
+              <input id="username" type="text" placeholder="Username" [(ngModel)]="profile.username"
+                [ngModelOptions]="{standalone: true}" />
+              <label for="username">Username</label>
+            </div>
+            <div class="field">
+              <input id="email" type="email" placeholder="Email" [(ngModel)]="profile.email"
+                [ngModelOptions]="{standalone: true}" />
+              <label for="email">Email</label>
+            </div>
+            <div class="field">
+              <input id="name" type="text" placeholder="Nombre" [(ngModel)]="profile.name"
+                [ngModelOptions]="{standalone: true}" />
+              <label for="name">Nombre</label>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="profile-picture-wrapper profile-picture-large flexbox m-auto">
+              <div class="profile-picture-inner flexbox"><img [src]="profile.avatar" alt="" class="profile-picture"></div>
+              <div class="profile-picture-background"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Guardar</button>
+    </div>
+  </form>
+</ng-template>
+<div class="profile-top">
+  <div class="profile-info flexbox">
+    <div class="profile-info-inner view-width flexbox-space-bet-start">
+      <div class="profile-left flexbox-start">
+        <div class="profile-picture-wrapper profile-picture-large flexbox">
+          <div class="profile-picture-inner flexbox"><img [src]="profile.avatar" alt="" class="profile-picture"></div>
+          <div class="profile-picture-background"></div>
+        </div>
+        <div class="profile-username-wrapper flexbox-col-start">
+          <h3 class="profile-username flexbox">
+            <span class="username">{{profile.username}}</span>
+            <ng-container *ngIf="profile.verified">
+              <span class="material-icons-round">verified</span>
+            </ng-container>
+          </h3>
+          <div class="profile-followers profile-followers-desk flexbox">
+            <p><span class="posts-amount">{{profile.posts.length}}</span>Posts</p>
+            <p><span class="followers-amount">{{profile.followers}}</span>Followers</p>
+            <p><span class="following-amount">{{profile.followings}}</span>Following</p>
+          </div>
+          <div class="profile-bio">
+            <p><span class="name">{{profile.name}}</span></p>
+            <p class="profile-bio-inner">
+              <span class="line">{{profile.description}}</span>
+              <span class="line">
+                <a href="#" target="_blank" class="profile-bio-link">
+                  {{profile.link}}
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="profile-right flexbox-start"><button class="custom-button" (click)="open(form)">Edit Profile</button>
+      </div>
+    </div>
+  </div>
+  <div class="profile-stories flexbox">
+    <div class="profile-stories-inner view-width flexbox-left">
+      <div class="profile-stories-overlay"></div>
+      <div class="profile-stories-scroll flexbox-left">
+        <ng-container *ngFor="let story of profile.stories">
+          <div id="{{story.id}}" class="profile-story-wrapper flexbox">
+            <div class="profile-story-inner flexbox"><img [src]="story.image" class="profile-story"></div>
+            <div class="profile-story-background"></div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
