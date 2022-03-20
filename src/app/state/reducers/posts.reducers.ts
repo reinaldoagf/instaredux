@@ -1,12 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { ProfileInterface } from 'src/app/core/models/profile.interface';
+import { ProfileState } from 'src/app/core/states/profile.state';
 import * as ProfileActions from '../actions/profile.actions';
 
-export interface State {
-  loading: boolean;
-  profile: ProfileInterface;
-}
-export const initialState: State = {
+export const initialState: ProfileState = {
     loading: false,
     profile: {
         avatar:'',
@@ -23,5 +19,6 @@ export const initialState: State = {
 };
 export const profileReducer = createReducer(
     initialState,
-    on(ProfileActions.loadProfile, state => ({ ...state, loading:true }))
+    on(ProfileActions.loadProfile, state => ({ ...state, loading:true })),
+    on(ProfileActions.loadedProfile, state => ({ ...state, loading:true }))
   );

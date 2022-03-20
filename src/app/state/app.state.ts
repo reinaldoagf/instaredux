@@ -1,0 +1,10 @@
+import {ActionReducerMap} from "@ngrx/store"
+import { ProfileState } from "../core/states/profile.state";
+import { profileReducer } from "./reducers/posts.reducers";
+export interface AppState {
+    profile: ProfileState;
+}
+
+export const ROOT_REDUCERS : ActionReducerMap<AppState> = {
+    profile: profileReducer
+}

@@ -1,6 +1,15 @@
 <app-header></app-header>
 <main id="main">
-  <app-profile-top [profile]="profile"></app-profile-top>
-  <app-profile-grid [profile]="profile"></app-profile-grid>
+  <ng-container *ngIf="loading$ | async">
+    <div class="spinner-container">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!(loading$ | async)">
+    <app-profile-top [profile]="profile"></app-profile-top>
+    <app-profile-grid [profile]="profile"></app-profile-grid>
+  </ng-container>
 </main>
 <app-footer></app-footer>
