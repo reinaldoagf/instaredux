@@ -7,6 +7,7 @@ export const initialState: ProfileState = {
     profile: {
         avatar:'',
         verified:false,
+        email:'',
         username:'',
         followers:'',
         followings:'',
@@ -20,8 +21,5 @@ export const initialState: ProfileState = {
 export const profileReducer = createReducer(
     initialState,
     on(ProfileActions.loadProfile, state => ({ ...state, loading:true })),
-    on(ProfileActions.loadedProfile, (state, element) => {
-        console.log('element:',element)
-        return ({ ...state, loading:false, profile:element.profile })
-    })
+    on(ProfileActions.loadedProfile, (state, element) => ( { ...state, loading:false, profile:element.profile }) )
   );

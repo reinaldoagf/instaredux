@@ -9,8 +9,10 @@ export class ProfileService {
   constructor() { }
   getData(): Observable<any>{
     return of({
+      id:'c3RvcmllLTasdadsAxLW9nRW5j',
       avatar:'https://i.pinimg.com/736x/e7/b3/33/e7b333f0d57c9822377fef799843f703.jpg',
       verified:true,
+      email:'zapatero.ve@gmail.com',
       username:'zapatero.ve',
       followers:'42.1k',
       followings:'756',
