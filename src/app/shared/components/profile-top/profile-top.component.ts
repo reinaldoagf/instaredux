@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Observable } from 'rxjs';
+import { profileSelector } from 'src/app/state/selectors/profile.selectors';
 
 
 @Component({
@@ -8,12 +11,16 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./profile-top.component.scss']
 })
 export class ProfileTopComponent implements OnInit {
-  @Input() profile: any;
+  profile$: Observable<any> = new Observable()
   closeResult = '';
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    private store:Store<any>
+  ) {}
 
   ngOnInit(): void {
+    this.profile$ = this.store.select(profileSelector)
   }
   open(content:any) {
     this.modalService.open(content, {size: 'lg',ariaLabelledBy: 'modal-basic-title',backdropClass: 'light-blue-backdrop'}).result.then((result) => {

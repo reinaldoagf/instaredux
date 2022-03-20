@@ -1,6 +1,6 @@
 <div class="profile-grid flexbox-col">
     <div class="profile-grid-inner view-width">
-      <ng-container *ngFor="let post of profile.posts">
+      <ng-container *ngFor="let post of (profile$ | async).posts">
         <app-profile-post [post]="post"></app-profile-post>
       </ng-container>
     </div>
