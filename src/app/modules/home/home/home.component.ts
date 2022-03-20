@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ProfileInterface } from 'src/app/core/models/profile.interface';
-import { loadProfile } from 'src/app/state/actions/posts.actions';
+import { loadProfile } from 'src/app/state/actions/profile.actions';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

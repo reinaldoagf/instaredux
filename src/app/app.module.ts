@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { profileReducer } from './state/reducers/posts.reducers';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    StoreModule.forRoot({},{}),
+    StoreModule.forRoot({
+      profileState: profileReducer
+    }),
     StoreDevtoolsModule.instrument({name:'TEST'}),
   ],
   providers: [],

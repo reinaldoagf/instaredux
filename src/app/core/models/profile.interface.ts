@@ -9,6 +9,6 @@ export interface ProfileInterface {
     name:string;
     description:string;
     link:string;
-    stories:StoryInterface[],
-    posts:PostInterface[],
+    stories:StoryInterface[];
+    posts:PostInterface[];
 }
