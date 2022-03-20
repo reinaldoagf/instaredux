@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Store } from '@ngrx/store';
+import { ProfileInterface } from 'src/app/core/models/profile.interface';
+import { loadProfile } from 'src/app/state/actions/posts.actions';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  profile:any={
+  profile:ProfileInterface={
     avatar:'https://i.pinimg.com/736x/e7/b3/33/e7b333f0d57c9822377fef799843f703.jpg',
     verified:true,
     username:'zapatero.ve',
@@ -75,9 +77,10 @@ export class HomeComponent implements OnInit {
     }],
   }
 
-  constructor() { }
+  constructor(private store:Store<any>) { }
 
   ngOnInit(): void {
+    this.store.dispatch(loadProfile())
   }
 
 }
