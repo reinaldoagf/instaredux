@@ -7,6 +7,8 @@ import { ProfileTopComponent } from './components/profile-top/profile-top.compon
 import { ProfileGridComponent } from './components/profile-grid/profile-grid.component';
 import { ProfilePostComponent } from './components/profile-post/profile-post.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProfileFormComponent } from './components/forms/profile-form/profile-form.component';
+import { ProfileFormModalComponent } from './components/modals/profile-form-modal/profile-form-modal.component';
 
 
 
@@ -16,7 +18,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ProfileTopComponent,
     ProfileGridComponent,
     ProfilePostComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileFormComponent,
+    ProfileFormModalComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ProfileTopComponent,
     ProfileGridComponent,
     ProfilePostComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileFormComponent,
+    ProfileFormModalComponent
   ]
 })
 export class SharedModule { }

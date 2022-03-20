@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Actualizar perfil</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <app-profile-form #profileFormRef></app-profile-form>
+</div>
+<div class="modal-footer" style="justify-content: space-between;">
+    <div class="">
+        <button class="btn btn-outline-dark" type="button" (click)="modal.dismiss('Cross click')">
+            Cerrar
+        </button>
+    </div>
+    <div class="">
+        <button type="button" class="btn btn-primary" (click)="save()">Guardar</button>
+    </div>
+</div>
