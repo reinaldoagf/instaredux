@@ -246,6 +246,28 @@ a {
     height: 8em;
     cursor: pointer;
 }
+nav {
+    height: 100%;
+    display: inline-flex;
+}
+nav span {
+    margin: 5px 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.1);
+}
+#user {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+#user img, #profile-pic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.profile-border{
+    border: solid 2px #787FF6;
+}
 /* = - = - = - = -
     Profile Top
 - = - = - = - = - */
@@ -276,10 +298,8 @@ a {
 .profile-picture-small .profile-picture-inner {
     width: 100%;
     height: 100%;
-    // border: .2em solid rgb(243, 242, 245);
 }
 .profile-picture-wrapper {
-    // width: 20%;
     position: relative;
     cursor: pointer;
 }
@@ -594,20 +614,7 @@ a {
 　　　　@media rules　　　　|
 -*-~*~-*-*-~*~-*-*-~*~-* |
 - */
-@media only screen and (max-width: 1660px) {
-    .view-width {
-        width: 65%;
-    }
-}
-@media only screen and (max-width: 1456px) {
-    .view-width {
-        width: 70%;
-    }
-}
 @media only screen and (max-width: 1220px) {
-    .view-width {
-        width: 75%;
-    }
     /* = - = - = - = -
         Profile Top
     - = - = - = - = - */
@@ -631,9 +638,6 @@ a {
         --heading-medium: 3.2rem;
         --heading-small: 2rem;
         --paragraph: 1rem;
-    }
-    .view-width {
-        width: 85%;
     }
     /* = - = - = - = -
         Profile Top
