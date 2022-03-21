@@ -8,6 +8,7 @@ import { ProfileInterface } from '../models/profile.interface';
 export class RestService {
   profile: ProfileInterface = {
     id:'c3RvcmllLTasdadsAxLW9nRW5j',
+    //avatar:'',
     avatar:'https://i.pinimg.com/736x/e7/b3/33/e7b333f0d57c9822377fef799843f703.jpg',
     verified:true,
     email:'zapatero.ve@gmail.com',

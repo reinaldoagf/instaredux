@@ -52,7 +52,8 @@
             </div>
             <div class="w-50">
                 <div class="profile-picture-wrapper profile-picture-large flexbox m-auto">
-                    <div class="profile-picture-inner flexbox"><img [src]="(profile$ | async).avatar" alt=""
+                    <div class="profile-picture-inner flexbox"><img brokenPicture
+                        [urlCustom]="'https://blackmantkd.com/wp-content/uploads/2017/04/default-image-620x600.jpg'" [src]="(profile$ | async).avatar" alt=""
                             class="profile-picture"></div>
                     <div class="profile-picture-background"></div>
                 </div>

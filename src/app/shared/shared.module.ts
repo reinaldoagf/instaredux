@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProfileFormComponent } from './components/forms/profile-form/profile-form.component';
 import { ProfileFormModalComponent } from './components/modals/profile-form-modal/profile-form-modal.component';
 
+//directives
+import { BrokenPictureDirective } from './directives/broken-picture.directive';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { ProfileFormModalComponent } from './components/modals/profile-form-moda
     ProfilePostComponent,
     FooterComponent,
     ProfileFormComponent,
-    ProfileFormModalComponent
+    ProfileFormModalComponent,
+    BrokenPictureDirective
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { ProfileFormModalComponent } from './components/modals/profile-form-moda
     ProfilePostComponent,
     FooterComponent,
     ProfileFormComponent,
-    ProfileFormModalComponent
+    ProfileFormModalComponent,
+    BrokenPictureDirective
   ]
 })
 export class SharedModule { }

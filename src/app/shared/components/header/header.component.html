@@ -1,4 +1,4 @@
-<div id="navbar" class="flexbox">
+<div id="navbar" class="flexbox header">
 
   <!-- Navbar Inner -->
   <div class="navbar-inner view-width flexbox-space-bet">
@@ -35,10 +35,13 @@
       </path>
     </svg>
   </div>
-  <div class="d-flex">
-    <div id="user" class="profile-border">
-      <img id="pic"
-        [src]="profile.avatar" />
+  <div class="d-flex align-items-center">
+    <div class="media-body mr-2 ">
+      <span class="text-sm font-weight-bold">{{(profile$ | async).email}}</span>
     </div>
+    <span class="avatar avatar-sm rounded-circle">
+      <img alt="Image placeholder" brokenPicture
+      [urlCustom]="'https://blackmantkd.com/wp-content/uploads/2017/04/default-image-620x600.jpg'" [src]="(profile$ | async).avatar">
+    </span>
   </div>
 </div>
