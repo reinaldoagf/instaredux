@@ -1,0 +1,14 @@
+
+  <div class="profile-stories flexbox">
+    <div class="profile-stories-inner view-width flexbox-left">
+      <div class="profile-stories-overlay"></div>
+      <div class="profile-stories-scroll flexbox-left">
+        <ng-container *ngFor="let story of ((profile$ | async).stories | genericFilter: searchTable)">
+          <div id="{{story.id}}" class="profile-story-wrapper flexbox">
+            <div class="profile-story-inner flexbox"><img [src]="story.image" class="profile-story"></div>
+            <div class="profile-story-background"></div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>

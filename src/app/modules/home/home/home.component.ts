@@ -15,7 +15,7 @@ import { loadingSelector } from 'src/app/state/selectors/profile.selectors';
 })
 export class HomeComponent implements OnInit {
   loading$: Observable<boolean> = new Observable()
-
+  search : string = '';
   constructor(
     private store:Store<any>,
     ) { }
@@ -24,4 +24,7 @@ export class HomeComponent implements OnInit {
     this.loading$ = this.store.select(loadingSelector)
     this.store.dispatch(loadProfile())
   }
+  /* onSearch($event){
+    console.log('$event:',$event)
+  } */
 }

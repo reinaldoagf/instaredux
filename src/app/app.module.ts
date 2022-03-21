@@ -23,7 +23,9 @@ import { ProfileEffects } from './state/effects/profile.effects';
     ReactiveFormsModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({name:'TEST'}),
-    EffectsModule.forRoot([ProfileEffects]),
+    EffectsModule.forRoot([
+      ProfileEffects
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Action, createReducer, on } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import { ProfileState } from 'src/app/core/states/profile.state';
 import * as ProfileActions from '../actions/profile.actions';
 

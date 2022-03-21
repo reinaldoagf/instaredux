@@ -8,8 +8,12 @@
     </div>
   </ng-container>
   <ng-container *ngIf="!(loading$ | async)">
-    <app-profile-top></app-profile-top>
-    <app-profile-grid></app-profile-grid>
+    <div class="profile-top">
+      <app-profile-info></app-profile-info>
+    </div>
+    <app-search-bar (onSearchEvent)="search = $event"></app-search-bar>
+    <app-profile-stories [search]="search"></app-profile-stories>
+    <app-profile-grid [search]="search"></app-profile-grid>
   </ng-container>
 </main>
 <app-footer></app-footer>
