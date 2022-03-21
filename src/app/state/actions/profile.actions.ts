@@ -5,6 +5,14 @@ export const loadProfile = createAction(
     '[Profile] Load profile'
 );
 export const loadedProfile = createAction(
-    '[Profile] Loaded profile',
-    props<{ profile:ProfileInterface }>()
+    '[Profile] Loaded profile success',
+    props<{ profile: ProfileInterface }>()
+);
+export const updateProfile = createAction(
+    '[Profile] Update profile',
+    props<{ profile: ProfileInterface }>()
+);
+export const updateProfileSuccess = createAction(
+    '[Profile] Updated profile success',
+    props<{ profile: ProfileInterface }>()
 );

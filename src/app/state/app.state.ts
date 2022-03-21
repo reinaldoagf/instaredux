@@ -1,6 +1,6 @@
 import {ActionReducerMap} from "@ngrx/store"
 import { ProfileState } from "../core/states/profile.state";
-import { profileReducer } from "./reducers/posts.reducers";
+import { profileReducer } from "./reducers/profile.reducers";
 export interface AppState {
     profile: ProfileState;
 }
