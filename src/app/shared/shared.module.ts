@@ -9,7 +9,10 @@ import { ProfilePostComponent } from './components/profile-post/profile-post.com
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileFormComponent } from './components/forms/profile-form/profile-form.component';
 import { ProfileFormModalComponent } from './components/modals/profile-form-modal/profile-form-modal.component';
+//pipes
 
+import { GenericFilterPipe } from 'src/app/shared/pipes/generic-filter.pipe';
+import { NumberSuffixPipe } from 'src/app/shared/pipes/number-suffix.pipe';
 //directives
 import { BrokenPictureDirective } from './directives/broken-picture.directive';
 
@@ -23,6 +26,8 @@ import { BrokenPictureDirective } from './directives/broken-picture.directive';
     FooterComponent,
     ProfileFormComponent,
     ProfileFormModalComponent,
+    GenericFilterPipe,
+    NumberSuffixPipe,
     BrokenPictureDirective
   ],
   imports: [
@@ -38,6 +43,8 @@ import { BrokenPictureDirective } from './directives/broken-picture.directive';
     FooterComponent,
     ProfileFormComponent,
     ProfileFormModalComponent,
+    GenericFilterPipe,
+    NumberSuffixPipe,
     BrokenPictureDirective
   ]
 })

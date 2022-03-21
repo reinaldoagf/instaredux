@@ -6,8 +6,8 @@ export interface ProfileInterface {
     verified:boolean;
     email:string;
     username:string;
-    followers:string;
-    followings:string;
+    followers:number;
+    followings:number;
     name:string;
     description:string;
     link:string;

@@ -13,8 +13,8 @@ export class RestService {
     verified:true,
     email:'zapatero.ve@gmail.com',
     username:'zapatero.ve',
-    followers:'42.1k',
-    followings:'756',
+    followers:12600000,//'42.1k',
+    followings:12600,//'756',
     name:'Zapatero Venezuela',
     description:`
     👟 Las mejores marcas en un solo lugar 
