@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
     avatar:'https://i.pinimg.com/736x/e7/b3/33/e7b333f0d57c9822377fef799843f703.jpg',
     verified:true,
     username:'zapatero.ve',
+    email:'zapatero.ve@gmail.com',
     followers:'42.1k',
     followings:'756',
     name:'Zapatero Venezuela',
